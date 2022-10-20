@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Project4StudyUdacity.iml" filepath="$PROJECT_DIR$/.idea/Project4StudyUdacity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/starter_code/auth-course.iml" filepath="$PROJECT_DIR$/starter_code/auth-course.iml" />
     </modules>
   </component>
 </project>

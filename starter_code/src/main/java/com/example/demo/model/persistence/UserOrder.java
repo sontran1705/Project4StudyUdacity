@@ -17,8 +17,12 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 @Table(name = "user_order")
 public class UserOrder {
 
@@ -41,39 +45,6 @@ public class UserOrder {
 	@JsonProperty
 	@Column
 	private BigDecimal total;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public List<Item> getItems() {
-		return items;
-	}
-
-	public void setItems(List<Item> items) {
-		this.items = items;
-	}
-
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
-	
-	public BigDecimal getTotal() {
-		return total;
-	}
-
-	public void setTotal(BigDecimal total) {
-		this.total = total;
-	}
-
 	public static UserOrder createFromCart(Cart cart) {
 		UserOrder order = new UserOrder();
 		order.setItems(cart.getItems().stream().collect(Collectors.toList()));

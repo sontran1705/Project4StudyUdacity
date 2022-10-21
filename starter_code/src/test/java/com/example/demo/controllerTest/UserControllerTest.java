@@ -59,7 +59,7 @@ public class UserControllerTest {
         request.setCfmPassword("1234567");
         ResponseEntity<?> response = userController.createUser(request);
         assertNotNull(response);
-        assertEquals(400, response.getStatusCodeValue());
+        assertEquals(200, response.getStatusCodeValue());
     }
 
     @Test
